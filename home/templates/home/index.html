@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inicio</title>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+        /* Agregar estilos adicionales si es necesario */
+    </style>
+</head>
+<body>
+    <div class="container mt-5">
+        <!-- Mostrar las primeras filas del DataFrame -->
+        <div class="row">
+            <div class="col-md-12">
+                <div class="card mb-5">
+                    <div class="card-header bg-primary text-light">
+                        <h1>DataFrame</h1>
+                    </div>
+                    <div class="card-body">
+                        <div class="table-responsive">
+                            <table class="table table-striped">
+                                {{ df_head }}
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Mostrar detalles del DataFrame -->
+        <!-- <div class="row">
+            <div class="col-md-12">
+                <div class="card mb-3">
+                    <div class="card-header bg-primary text-light">
+                        <h1>Detalles del DataFrame</h1>
+                    </div>
+                    <div class="card-body">
+                        <pre>{{ df_info }}</pre>
+                    </div>
+                </div>
+            </div>
+        </div> -->
+
+        <!-- Mostrar conteo de valores de la variable de salida -->
+        <div class="row">
+            <div class="col-md-12">
+                <div class="card mb-3">
+                    <h1>Variable de salida</h1>
+                </div>
+                <div class="card-header bg-primary text-light">
+                    <pre>{{ df_value_counts }}</pre>
+                </div>
+                <div class="card-body">
+
+                </div>
+            </div>
+        </div>
+
+        <!-- Mostrar puntajes F1 Score y F2 Score -->
+        <div class="row">
+            <div class="col-md-6">
+                <div class="card mb-3">
+                    <div class="card-header bg-primary text-light">
+                        <h1>Entrenamiento</h1>
+                    </div>
+                    <div class="card-body">
+                        <p>Puntaje F1 Score (entrenamiento): {{ f1_train_rf }}</p>
+                        <p>Puntaje F1 Score (validación): {{ f1_val_rf }}</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="card mb-3">
+                    <div class="card-header bg-primary text-light">
+                        <h1>Entrenamiento</h1>
+                    </div>
+                    <div class="card-body">
+                        <p>Puntaje F2 Score (entrenamiento): {{ f2_train_rf }}</p>
+                        <p>Puntaje F2 Score (validación): {{ f2_val_rf }}</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Bootstrap JS (opcional, si se necesita funcionalidad de Bootstrap) -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
